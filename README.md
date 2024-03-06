@@ -14,22 +14,23 @@ Welcome to the Kaffirfold Surgery Management System README! This framework, powe
 
 - **CLI Development**: Streamline development tasks with CLI commands for database operations, model and controller creation, and more.
 
-### Installation
+## Installation
 
 1. **Clone Repository**: Clone the repository to your local machine. OR
-   
-2. **Use Composer**: Install dependencies using Composer.
-    ```bash
-    composer create-project kaffirfold/surgery [your-project-name]
-    ```
-2.1. **Database Setup**: Create a new database.
-    ```bash
-    composer create-project kaffirfold/surgery [your-project-name]
-    ```
-    
-2.2. Configure the database name in `app/core/config.php`, as per the recently created.
 
-2.3. **Migrations**: Configure and execute migrations to set up the database tables.
+2. **Use Composer**: Install project using Composer.
+    ```bash
+    composer create-project kaffirfold/surgery [your-project-name]
+    ```
+
+   - **Database Setup**: Create a new database.
+    ```bash
+    php jongi db:create [dbname]
+    ```
+
+   - **Configure the database name**: Update the database name in `app/core/config.php` with the recently created database.
+
+   - **Migrations**: Configure and execute migrations to set up the database tables.
     ```bash
     php jongi migrate:all
     ```
@@ -48,4 +49,4 @@ This project is licensed under the GPL-3.0-or-later license.
 
 This project utilizes UI templates from Bootstrapmade and KaffirFold for both backend and frontend interfaces.
 
-In summary, the Kaffirfold Surgery Management System offers a unique blend of functionality, combining the flexibility of CMS (Content Management System) with the power of a PHP Web Applications Framework. Experience streamlined medical centre management like never before!
+In summary, the Kaffirfold Surgery Management System offers a unique blend of functionality, combining the flexibility of CMS (Content Management System) with the power of a PHP Web Applications Framework. Experience streamlined medical center management like never before!
