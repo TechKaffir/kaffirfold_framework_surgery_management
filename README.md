@@ -17,16 +17,19 @@ Welcome to the Kaffirfold Surgery Management System README! This framework, powe
 ### Installation
 
 1. **Clone Repository**: Clone the repository to your local machine. OR
+   
 2. **Use Composer**: Install dependencies using Composer.
     ```bash
     composer create-project kaffirfold/surgery [your-project-name]
     ```
-2.1 **Database Setup**: Create a new database
+2.1. **Database Setup**: Create a new database.
     ```bash
     composer create-project kaffirfold/surgery [your-project-name]
     ```
-2.2 Configure the database name in `app/core/config.php`, as per the recently created.
-2.3 **Migrations**: Configure and execute migrations to set up the database tables.
+    
+2.2. Configure the database name in `app/core/config.php`, as per the recently created.
+
+2.3. **Migrations**: Configure and execute migrations to set up the database tables.
     ```bash
     php jongi migrate:all
     ```
