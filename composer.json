@@ -1,6 +1,17 @@
 {
+    "name": "jongi/kaffirfold",
+    "description": "A Framework of a framework, the Kaffirfold Surgery Management System is a Medical Centre Management Framework built with the KaffirFold engine (a Custom PHP MVC Framework developed by The TechKaffir at Jongi Brands Tech Solutions).",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Jongi-TheTechKaffir",
+            "email": "jongim@jongimbodla.africa"
+        }
+    ],
     "require": {
         "phpmailer/phpmailer": "^6.9",
         "dompdf/dompdf": "^2.0"
-    }
+    },
+    "version": "1.0.2"
 }
