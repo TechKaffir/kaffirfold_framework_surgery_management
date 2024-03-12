@@ -32,5 +32,15 @@ class Util
 		}
 	}
 
+	public static function contactWidget()
+	{
+		echo SP_WIDGET_SCRIPT;
+	}
+	public static function contactOnPage()
+	{
+		echo SP_ONPAGE_SCRIPT;
+	}
+
+
 	
 }

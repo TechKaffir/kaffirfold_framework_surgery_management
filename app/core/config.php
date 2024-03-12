@@ -47,6 +47,18 @@ define('POLICY_ADOPT_DATE','2024-01-01');
 define('DR_PR_NO','04265878');
 define('MED_PR_NO','05362903');
 define('DR_NAME','Dr. J.W. KaffirFold Incorporated');
+define('SP_WIDGET_SCRIPT',"<!-- Begin SpeakPipe code -->
+<script type='text/javascript'>
+(function(d){
+var app = d.createElement('script'); app.type = 'text/javascript'; app.async = true;
+app.src = 'https://www.speakpipe.com/loader/oq9vha0o9tc6svsuivk6wv3m0s5a45f4.js';
+var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(app, s);
+})(document);
+</script>
+<!-- End SpeakPipe code -->");
+define('SP_ONPAGE_SCRIPT','<iframe src="https://www.speakpipe.com/widget/inline/oq9vha0o9tc6svsuivk6wv3m0s5a45f4" allow="microphone" width="100%" height="200" frameborder="0"></iframe>
+	<script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+	');
 
 define('DEF_CURR','R');
 define('JONGI_CLI_VERS','1.0.0');

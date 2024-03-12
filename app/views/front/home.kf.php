@@ -71,15 +71,6 @@
 
 <!-- ======= Footer ======= -->
 <!-- Begin SpeakPipe code -->
-<script type="text/javascript">
-  (function(d) {
-    var app = d.createElement('script');
-    app.type = 'text/javascript';
-    app.async = true;
-    app.src = 'https://www.speakpipe.com/loader/rwsfn4glsopok8hjknrajsce6obqld27.js';
-    var s = d.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(app, s);
-  })(document);
-</script>
+<?= Util::contactWidget() ?>
 <!-- End SpeakPipe code -->
 <?php $this->view('front/inc/front-footer', $data) ?>
