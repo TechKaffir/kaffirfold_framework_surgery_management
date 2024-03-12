@@ -20,7 +20,7 @@ Welcome to the Kaffirfold Surgery Management System README! This framework, powe
 
 2. **Use Composer**: Install project using Composer.
     ```bash
-    composer create-project kaffirfold/surgery [your-project-name]
+    composer create-project kaffirfold/surgery [your-project-name] --stability=dev
     ```
 
    - **Database Setup**: Create a new database.
