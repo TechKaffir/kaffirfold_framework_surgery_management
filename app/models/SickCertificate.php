@@ -114,19 +114,4 @@ class SickCertificate
 		}
 	}
 	
-	public function sickVerify($surname, $firstname, $cons_date)
-	{
-		$sql = "SELECT sc.patient, sc.cons_date, sc.label, p.id, p.Surname, p.First_Name
-				FROM sick_certificate sc
-				JOIN patients p ON sc.patient = p.id
-				WHERE p.Surname = ? 
-				AND p.First_Name = ?
-				AND sc.cons_date = ?
-				";
-		$stmt = $this->connect()->prepare($sql);
-		$stmt->execute([$surname, $firstname, $cons_date]);
-		$result = $stmt->fetch(PDO::FETCH_OBJ);
-
-		return $result;
-	}
 }

@@ -81,16 +81,12 @@ $users = $user->findAll();
             <strong><?= $sick->remarks ?></strong>
         </p>
     </div>
-    <div style="text-align: right;margin-top:80px"> <br><br><br>
+    <div style="text-align: right;margin-top:30px"> <br><br><br>
         ...................................................... <br> Doctor's Signature
     </div>
     <div class="footer">
         <div style="border:1px solid #ccc;width:200px;height:200px">
             <p style="color:#ccc;text-align:center;margin-top:85px">DOCTOR'S STAMP</p>
-        </div>
-        <div class="qrcode-sec">
-            <span style="font-size: 10px;text-align:center;margin-right:90px">To verify this certificate, use your smart phone's QR/Bar code scanner to scan this QR Code</span>
-            <img src="<?= ROOT . '/assets/img/sicknote-qr-code.png' ?>" width="100px" alt="">
         </div>
     </div>
 </div>
