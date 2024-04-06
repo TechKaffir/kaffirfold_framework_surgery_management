@@ -110,7 +110,7 @@ class Patient
 
 	public function patients()
 	{
-		$sql = "SELECT id, First_Name, Surname, contact_number, medical_aid_scheme FROM patients ORDER BY Surname DESC";
+		$sql = "SELECT id, File_Number, First_Name, Surname, contact_number, Employer, medical_aid_scheme FROM patients ORDER BY Surname DESC";
 		$result = $this->query($sql);
 		if($result)
 		{
@@ -178,6 +178,21 @@ class Patient
 		if($result)
 		{
 			return $result;
+		}
+	}
+
+	public function patientSearch($input)
+	{
+		$sql = "SELECT * FROM patients WHERE First_Name LIKE '{$input}%' AND Surname LIKE '{$input}%'";
+		$input = $this->query($sql);
+		
+		if($input)
+		{
+			return $input;
+		}
+		else 
+		{
+			Util::setFlash('no_patient_record_found','No Patient Record found!!');
 		}
 	}
 }

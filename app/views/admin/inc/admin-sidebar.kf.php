@@ -41,6 +41,11 @@
       </a>
       <ul id="patient-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
         <li>
+          <a href="<?= ROOT ?>/admin/patient_search">
+            <i class="bi bi-circle-fill text-<?= THEME_COLOR ?>"></i><span class="text-<?= THEME_COLOR ?>">Patients</span>
+          </a>
+        </li>
+        <li>
           <a href="<?= ROOT ?>/admin/patients/new">
             <i class="bi bi-circle-fill text-<?= THEME_COLOR ?>"></i><span class="text-<?= THEME_COLOR ?>">Add New Patient</span>
           </a>

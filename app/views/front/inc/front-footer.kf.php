@@ -67,6 +67,10 @@
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+
+<!--jQuery-->
+<script src="<?= ROOT ?>/assets/js/jquery.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
 <!-- Vendor JS Files -->
 <script src="<?= ROOT ?>/assets/vendor/purecounter/purecounter_vanilla.js"></script>
 <script src="<?= ROOT ?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

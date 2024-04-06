@@ -1591,4 +1591,23 @@ class Admin
 		$content = ob_get_clean();
 		return $content;
 	}
+	public function patient_search($action = null, $id = null)
+	{
+		$user = new User();
+		$patient = new Patient();
+
+		// Notifications
+		$notification = new Notification;
+		$data['notifications'] = $notification->notifications();
+		$data['unreadNotifications'] = $notification->getUnreadNotifications(user('id'));
+
+		if (!$user->logged_in())
+			redirect('login');
+
+		$data['action'] = $action;
+		
+		$data['page_title'] = 'Patient Search';
+
+		$this->view('admin/patients/patient-search', $data);
+	}
 }

@@ -9,8 +9,12 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short bg-<?= THEME_COLOR ?>"></i></a>
 
+  
+  <!--jQuery-->
+  <script src="<?= ROOT ?>/assets/js/jquery.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+  
   <!--Select 2-->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
   <!--End Select 2-->
   

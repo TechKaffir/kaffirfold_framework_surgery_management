@@ -461,7 +461,7 @@
                             <section class="section profile mt-5">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <a class="mb-3 btn btn-outline-<?= THEME_COLOR ?>" href="<?= ROOT ?>/admin/consultation" style="border-radius:20px"><i class="bi bi-arrow-left"></i> BACK TO BOOKING LIST</a>
+                                        <a class="mb-3 btn btn-outline-<?= THEME_COLOR ?>" href="<?= ROOT ?>/admin" style="border-radius:20px"><i class="bi bi-arrow-left"></i> BACK TO DASHBOARD</a>
                                     </div>
                                     <div class="col-lg-6">
                                         <a class="mb-3 btn btn-outline-<?= THEME_COLOR ?>" href="<?= ROOT ?>/admin/patients/edit/<?= $singlePatient->id ?>" style="border-radius:20px"><i class="bi bi-edit"></i> EDIT PATIENT</a>
@@ -1428,25 +1428,58 @@
                         <?php else : ?>
 
                             <div class="row mt-3">
-                                <a href="<?= ROOT ?>/admin/patients/new" class="btn btn-outline-<?= THEME_COLOR ?>">ADD NEW
-                                    PATIENT</a>
+                                <a href="<?= ROOT ?>/admin/patients/new" class="btn btn-outline-<?= THEME_COLOR ?>">ADD NEW PATIENT</a>
                             </div>
                             <hr>
                             <?= Util::displayFlash('patient_delete_success', 'success') ?>
+                            
+                            
                             <div class="row">
-                                <!--Below I am saving computing resourses by returning a rwa data of some of the keys in the table 'patients' given the fact that, during the operations, there is rarely a need to have all the patients listed, as we work around a single client everytime we query the database-->
-                                <div class="alert alert-success text-center">
-                                    If you wish to search for a record, press "Ctrl" + "f", then key in the search string on the popup!! <br> For example: the <em>"surname</em> of the patient"
-                                </div>
-                                <?php
-                                $userRows = 1;
-                                if (!empty($rows)) :
-                                    foreach ($rows as $row) :
-                                        show($row);
-                                    endforeach;
-                                endif;
-                                ?>
+                                <div class="col-lg-12 table-responsive">
+                                    <!-- Table with stripped rows -->
+                                    <table class="table datatable">
 
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">File No.</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Medical Aid</th>
+                                                <th scope="col">Employer</th>
+                                                <th scope="col">Phone</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $userRows = 1;
+                                            if (!empty($rows)) :
+                                                foreach ($rows as $row) :
+                                            ?>
+                                                <tr>
+                                                    <th scope="row"><?= $userRows++ ?></th>
+
+                                                    <td><?= $row->File_Number ? $row->File_Number : '0000' ?></td>
+                                                    <td><?= $row->Surname . ', ' . $row->First_Name ?></td>
+                                                    <td><?= $row->medical_aid_scheme ? $row->medical_aid_scheme : 'N/A'  ?></td>
+                                                    <td><?= $row->Employer ? $row->Employer : 'N/A'  ?></td>
+                                                    <td><?= $row->contact_number  ? $row->contact_number  : 'Not Provided'  ?></td>
+                                                    <td>
+                                                        <div class="text-center d-flex">
+                                                            <a href="<?= ROOT ?>/admin/patients/view/<?= $row->id ?>"><i class="bi bi-eye m-2 text-success"></i></a>
+                                                            <a href="<?= ROOT ?>/admin/patients/edit/<?= $row->id ?>"><i class="bi bi-pencil-square m-2"></i></a>
+                                                            <a href="<?= ROOT ?>/admin/patients/delete/<?= $row->id ?>" onclick="alert('Are you sure you want to delete this record? This action cannot be reversed. Click \'OK\' to proceed OR \'JUST REFRESH THE PAGE\' to cancel the action!')"><i class="bi bi-trash m-2 text-danger "></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            <?php
+                                                endforeach;
+                                            endif;
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                    <!-- End Table with stripped rows -->
+                                </div>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -1486,6 +1519,7 @@
             console.log(result);
         }
     }
+    
 </script>
 
 <!-- ======= Footer ======= -->
